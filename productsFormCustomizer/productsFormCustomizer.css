@@ -1,0 +1,57 @@
+div[data-name='DISCOUNT_ROW'] {position: relative;}
+div[data-name='DISCOUNT_ROW']:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: not-allowed;
+    z-index: 1;
+    background-color: #ccc;
+    opacity: 0.3;
+}
+div[data-name='SUM'] {position: relative;}
+div[data-name='SUM']:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: not-allowed;
+    z-index: 1;
+    background-color: #ccc;
+    opacity: 0.3;
+}
+
+.main-grid-row-edit_canceled div[data-name="PRICE"]:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: not-allowed;
+    z-index: 1;
+    background-color: #ccc;
+    opacity: 0.3;
+}
+
+
+/** спрятать в таблице товаров заказов (QUOTE) строки все, кроме Сумма без скидки:Сумма скидки: Общая сумма: **/
+.crm-product-list-payment-side-table tbody tr:nth-child(2n) {
+    position: fixed;
+	top: -10000%;
+}
+.crm-product-list-payment-side-table tbody tr:last-child {
+    position: relative;
+    top: -52px;
+    background-color: #fff;
+}
+tr.crm-product-list-result-grid-benefit {
+    position: relative;
+}
+
+
+
